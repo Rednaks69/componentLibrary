@@ -1,7 +1,10 @@
-// import React from 'react'
+import { ComponentProps } from "react";
 
-const Button = () => {
-  return <button className='text-blue-50'>click</button>;
+// import React from 'react'
+type ButtonProps = ComponentProps<"button">;
+
+const Button = ({ ...props }: ButtonProps) => {
+  return <button className='text-blue-500' {...props} />;
 };
 
 export default Button;
